@@ -6,7 +6,7 @@ import (
 	"github.com/aws/aws-cdk-go/awscdk/v2/awssecretsmanager"
 )
 
-type GitHubProps struct {
+type TwilioProps struct {
 	// Eventbus to send GitHub events to.
 	EventBus awsevents.IEventBus `field:"required" json:"eventBus" yaml:"eventBus"`
 	// Maximum number of concurrent invocations on the fURL function before triggering the alarm.

@@ -5,6 +5,7 @@ import (
 	_init_ "github.com/a-bigelow/cdk-eventbridge-partner-processors/cdkeventbridgepartnerprocessors/jsii"
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
 
+	"github.com/a-bigelow/cdk-eventbridge-partner-processors/cdkeventbridgepartnerprocessors/internal"
 	"github.com/aws/aws-cdk-go/awscdk/v2/awslambda"
 	"github.com/aws/constructs-go/constructs/v10"
 )
@@ -12,8 +13,8 @@ import (
 // CDK wrapper for the GitHub Eventbridge processor.
 // See: https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-saas-furls.html#furls-connection-github
 //
-type GitHubEventProcessor interface {
-	PartnerProcessor
+type PartnerProcessor interface {
+	constructs.Construct
 	InvocationAlarm() InvocationAlarm
 	SetInvocationAlarm(val InvocationAlarm)
 	// The tree node.
@@ -24,12 +25,12 @@ type GitHubEventProcessor interface {
 	ToString() *string
 }
 
-// The jsii proxy struct for GitHubEventProcessor
-type jsiiProxy_GitHubEventProcessor struct {
-	jsiiProxy_PartnerProcessor
+// The jsii proxy struct for PartnerProcessor
+type jsiiProxy_PartnerProcessor struct {
+	internal.Type__constructsConstruct
 }
 
-func (j *jsiiProxy_GitHubEventProcessor) InvocationAlarm() InvocationAlarm {
+func (j *jsiiProxy_PartnerProcessor) InvocationAlarm() InvocationAlarm {
 	var returns InvocationAlarm
 	_jsii_.Get(
 		j,
@@ -39,7 +40,7 @@ func (j *jsiiProxy_GitHubEventProcessor) InvocationAlarm() InvocationAlarm {
 	return returns
 }
 
-func (j *jsiiProxy_GitHubEventProcessor) Node() constructs.Node {
+func (j *jsiiProxy_PartnerProcessor) Node() constructs.Node {
 	var returns constructs.Node
 	_jsii_.Get(
 		j,
@@ -49,7 +50,7 @@ func (j *jsiiProxy_GitHubEventProcessor) Node() constructs.Node {
 	return returns
 }
 
-func (j *jsiiProxy_GitHubEventProcessor) PartnerEventsFunction() awslambda.Function {
+func (j *jsiiProxy_PartnerProcessor) PartnerEventsFunction() awslambda.Function {
 	var returns awslambda.Function
 	_jsii_.Get(
 		j,
@@ -60,31 +61,17 @@ func (j *jsiiProxy_GitHubEventProcessor) PartnerEventsFunction() awslambda.Funct
 }
 
 
-func NewGitHubEventProcessor(scope constructs.Construct, id *string, props *GitHubProps) GitHubEventProcessor {
-	_init_.Initialize()
-
-	j := jsiiProxy_GitHubEventProcessor{}
-
-	_jsii_.Create(
-		"cdk-eventbridge-partner-processors.GitHubEventProcessor",
-		[]interface{}{scope, id, props},
-		&j,
-	)
-
-	return &j
-}
-
-func NewGitHubEventProcessor_Override(g GitHubEventProcessor, scope constructs.Construct, id *string, props *GitHubProps) {
+func NewPartnerProcessor_Override(p PartnerProcessor, scope constructs.Construct, id *string, props *PartnerFunctionProps) {
 	_init_.Initialize()
 
 	_jsii_.Create(
-		"cdk-eventbridge-partner-processors.GitHubEventProcessor",
+		"cdk-eventbridge-partner-processors.PartnerProcessor",
 		[]interface{}{scope, id, props},
-		g,
+		p,
 	)
 }
 
-func (j *jsiiProxy_GitHubEventProcessor) SetInvocationAlarm(val InvocationAlarm) {
+func (j *jsiiProxy_PartnerProcessor) SetInvocationAlarm(val InvocationAlarm) {
 	_jsii_.Set(
 		j,
 		"invocationAlarm",
@@ -92,7 +79,7 @@ func (j *jsiiProxy_GitHubEventProcessor) SetInvocationAlarm(val InvocationAlarm)
 	)
 }
 
-func (j *jsiiProxy_GitHubEventProcessor) SetPartnerEventsFunction(val awslambda.Function) {
+func (j *jsiiProxy_PartnerProcessor) SetPartnerEventsFunction(val awslambda.Function) {
 	_jsii_.Set(
 		j,
 		"partnerEventsFunction",
@@ -104,13 +91,13 @@ func (j *jsiiProxy_GitHubEventProcessor) SetPartnerEventsFunction(val awslambda.
 //
 // Returns: true if `x` is an object created from a class which extends `Construct`.
 // Deprecated: use `x instanceof Construct` instead.
-func GitHubEventProcessor_IsConstruct(x interface{}) *bool {
+func PartnerProcessor_IsConstruct(x interface{}) *bool {
 	_init_.Initialize()
 
 	var returns *bool
 
 	_jsii_.StaticInvoke(
-		"cdk-eventbridge-partner-processors.GitHubEventProcessor",
+		"cdk-eventbridge-partner-processors.PartnerProcessor",
 		"isConstruct",
 		[]interface{}{x},
 		&returns,
@@ -119,11 +106,11 @@ func GitHubEventProcessor_IsConstruct(x interface{}) *bool {
 	return returns
 }
 
-func (g *jsiiProxy_GitHubEventProcessor) ToString() *string {
+func (p *jsiiProxy_PartnerProcessor) ToString() *string {
 	var returns *string
 
 	_jsii_.Invoke(
-		g,
+		p,
 		"toString",
 		nil, // no parameters
 		&returns,

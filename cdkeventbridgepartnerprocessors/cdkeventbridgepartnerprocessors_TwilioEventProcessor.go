@@ -12,7 +12,7 @@ import (
 // CDK wrapper for the GitHub Eventbridge processor.
 // See: https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-saas-furls.html#furls-connection-github
 //
-type GitHubEventProcessor interface {
+type TwilioEventProcessor interface {
 	PartnerProcessor
 	InvocationAlarm() InvocationAlarm
 	SetInvocationAlarm(val InvocationAlarm)
@@ -24,12 +24,12 @@ type GitHubEventProcessor interface {
 	ToString() *string
 }
 
-// The jsii proxy struct for GitHubEventProcessor
-type jsiiProxy_GitHubEventProcessor struct {
+// The jsii proxy struct for TwilioEventProcessor
+type jsiiProxy_TwilioEventProcessor struct {
 	jsiiProxy_PartnerProcessor
 }
 
-func (j *jsiiProxy_GitHubEventProcessor) InvocationAlarm() InvocationAlarm {
+func (j *jsiiProxy_TwilioEventProcessor) InvocationAlarm() InvocationAlarm {
 	var returns InvocationAlarm
 	_jsii_.Get(
 		j,
@@ -39,7 +39,7 @@ func (j *jsiiProxy_GitHubEventProcessor) InvocationAlarm() InvocationAlarm {
 	return returns
 }
 
-func (j *jsiiProxy_GitHubEventProcessor) Node() constructs.Node {
+func (j *jsiiProxy_TwilioEventProcessor) Node() constructs.Node {
 	var returns constructs.Node
 	_jsii_.Get(
 		j,
@@ -49,7 +49,7 @@ func (j *jsiiProxy_GitHubEventProcessor) Node() constructs.Node {
 	return returns
 }
 
-func (j *jsiiProxy_GitHubEventProcessor) PartnerEventsFunction() awslambda.Function {
+func (j *jsiiProxy_TwilioEventProcessor) PartnerEventsFunction() awslambda.Function {
 	var returns awslambda.Function
 	_jsii_.Get(
 		j,
@@ -60,13 +60,13 @@ func (j *jsiiProxy_GitHubEventProcessor) PartnerEventsFunction() awslambda.Funct
 }
 
 
-func NewGitHubEventProcessor(scope constructs.Construct, id *string, props *GitHubProps) GitHubEventProcessor {
+func NewTwilioEventProcessor(scope constructs.Construct, id *string, props *TwilioProps) TwilioEventProcessor {
 	_init_.Initialize()
 
-	j := jsiiProxy_GitHubEventProcessor{}
+	j := jsiiProxy_TwilioEventProcessor{}
 
 	_jsii_.Create(
-		"cdk-eventbridge-partner-processors.GitHubEventProcessor",
+		"cdk-eventbridge-partner-processors.TwilioEventProcessor",
 		[]interface{}{scope, id, props},
 		&j,
 	)
@@ -74,17 +74,17 @@ func NewGitHubEventProcessor(scope constructs.Construct, id *string, props *GitH
 	return &j
 }
 
-func NewGitHubEventProcessor_Override(g GitHubEventProcessor, scope constructs.Construct, id *string, props *GitHubProps) {
+func NewTwilioEventProcessor_Override(t TwilioEventProcessor, scope constructs.Construct, id *string, props *TwilioProps) {
 	_init_.Initialize()
 
 	_jsii_.Create(
-		"cdk-eventbridge-partner-processors.GitHubEventProcessor",
+		"cdk-eventbridge-partner-processors.TwilioEventProcessor",
 		[]interface{}{scope, id, props},
-		g,
+		t,
 	)
 }
 
-func (j *jsiiProxy_GitHubEventProcessor) SetInvocationAlarm(val InvocationAlarm) {
+func (j *jsiiProxy_TwilioEventProcessor) SetInvocationAlarm(val InvocationAlarm) {
 	_jsii_.Set(
 		j,
 		"invocationAlarm",
@@ -92,7 +92,7 @@ func (j *jsiiProxy_GitHubEventProcessor) SetInvocationAlarm(val InvocationAlarm)
 	)
 }
 
-func (j *jsiiProxy_GitHubEventProcessor) SetPartnerEventsFunction(val awslambda.Function) {
+func (j *jsiiProxy_TwilioEventProcessor) SetPartnerEventsFunction(val awslambda.Function) {
 	_jsii_.Set(
 		j,
 		"partnerEventsFunction",
@@ -104,13 +104,13 @@ func (j *jsiiProxy_GitHubEventProcessor) SetPartnerEventsFunction(val awslambda.
 //
 // Returns: true if `x` is an object created from a class which extends `Construct`.
 // Deprecated: use `x instanceof Construct` instead.
-func GitHubEventProcessor_IsConstruct(x interface{}) *bool {
+func TwilioEventProcessor_IsConstruct(x interface{}) *bool {
 	_init_.Initialize()
 
 	var returns *bool
 
 	_jsii_.StaticInvoke(
-		"cdk-eventbridge-partner-processors.GitHubEventProcessor",
+		"cdk-eventbridge-partner-processors.TwilioEventProcessor",
 		"isConstruct",
 		[]interface{}{x},
 		&returns,
@@ -119,11 +119,11 @@ func GitHubEventProcessor_IsConstruct(x interface{}) *bool {
 	return returns
 }
 
-func (g *jsiiProxy_GitHubEventProcessor) ToString() *string {
+func (t *jsiiProxy_TwilioEventProcessor) ToString() *string {
 	var returns *string
 
 	_jsii_.Invoke(
-		g,
+		t,
 		"toString",
 		nil, // no parameters
 		&returns,
