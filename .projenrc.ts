@@ -2,13 +2,13 @@ import { awscdk } from 'projen';
 const project = new awscdk.AwsCdkConstructLibrary({
   author: 'a-bigelow',
   authorAddress: 'adam@adambigelow.com',
-  cdkVersion: '2.1.0',
+  cdkVersion: '2.37.1',
   defaultReleaseBranch: 'main',
   name: 'cdk-eventbridge-partner-processors',
   projenrcTs: true,
-  release: false,
+  release: true,
   repositoryUrl: 'https://github.com/a-bigelow/cdk-eventbridge-partner-processors.git',
-
+  gitignore: ['.idea/'],
   // deps: [],                /* Runtime dependencies of this module. */
   // description: undefined,  /* The description is just a string that helps people understand the purpose of the package. */
   // devDeps: [],             /* Build dependencies for this module. */
