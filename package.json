@@ -118,6 +118,9 @@
       "python": {
         "distName": "a-bigelow.cdk-eventbridge-partner-processors",
         "module": "a-bigelow.cdk-eventbridge-partner-processors"
+      },
+      "go": {
+        "moduleName": "github.com/a-bigelow/cdk-eventbridge-partner-processors"
       }
     },
     "tsc": {
