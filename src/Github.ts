@@ -10,17 +10,17 @@ export interface GitHubProps {
   /**
    * SM Secret containing the secret string used to validate webhook events.
    */
-  readonly GitHubWebhookSecret: ISecret;
+  readonly gitHubWebhookSecret: ISecret;
 
   /**
    * Eventbus to send GitHub events to.
    */
-  readonly EventBus: IEventBus;
+  readonly eventBus: IEventBus;
 
   /**
    * Maximum number of concurrent invocations on the fURL function before triggering the alarm.
    */
-  readonly LambdaInvocationAlarmThreshold: number;
+  readonly lambdaInvocationAlarmThreshold: number;
 
 }
 
@@ -41,15 +41,15 @@ export class GitHubEventProcessor extends Construct {
       timeout: Duration.seconds(100),
       reservedConcurrentExecutions: 10,
       environment: {
-        GITHUB_WEBHOOK_SECRET_ARN: props.GitHubWebhookSecret.secretArn,
-        EVENT_BUS_NAME: props.EventBus.eventBusName,
+        GITHUB_WEBHOOK_SECRET_ARN: props.gitHubWebhookSecret.secretArn,
+        EVENT_BUS_NAME: props.eventBus.eventBusName,
       },
     });
 
     const fURL = this.githubEventsFunction.addFunctionUrl({ authType: FunctionUrlAuthType.NONE });
 
-    props.GitHubWebhookSecret.grantRead(this.githubEventsFunction);
-    props.EventBus.grantPutEventsTo(this.githubEventsFunction);
+    props.gitHubWebhookSecret.grantRead(this.githubEventsFunction);
+    props.eventBus.grantPutEventsTo(this.githubEventsFunction);
 
     new CfnOutput(this, 'GitHubFunctionUrl', { value: fURL.url });
   }
