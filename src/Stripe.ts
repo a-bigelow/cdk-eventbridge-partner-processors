@@ -4,7 +4,7 @@ import { Construct } from 'constructs';
 import { Partner } from './Partner';
 import { PartnerProcessor } from './PartnerFunction';
 
-export interface GitHubProps {
+export interface StripeProps {
 
   /**
    * SM Secret containing the secret string used to validate webhook events.
@@ -27,8 +27,8 @@ export interface GitHubProps {
  * CDK wrapper for the GitHub Eventbridge processor.
  * @see https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-saas-furls.html#furls-connection-github
  */
-export class GitHubEventProcessor extends PartnerProcessor {
-  constructor(scope: Construct, id: string, props: GitHubProps) {
-    super(scope, id, { ...props, eventbridgePartner: Partner.GITHUB });
+export class StripeEventProcessor extends PartnerProcessor {
+  constructor(scope: Construct, id: string, props: StripeProps) {
+    super(scope, id, { ...props, eventbridgePartner: Partner.STRIPE });
   }
 }
