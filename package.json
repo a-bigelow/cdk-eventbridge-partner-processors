@@ -116,8 +116,8 @@
     "outdir": "dist",
     "targets": {
       "python": {
-        "distName": "cdk-eventbridge-partner-processors",
-        "module": "cdk-eventbridge-partner-processors"
+        "distName": "a-bigelow.cdk-eventbridge-partner-processors",
+        "module": "a-bigelow.cdk-eventbridge-partner-processors"
       }
     },
     "tsc": {
