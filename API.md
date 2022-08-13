@@ -89,8 +89,8 @@ Any object.
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#cdk-eventbridge-partner-processors.GitHubEventProcessor.property.node">node</a></code> | <code>constructs.Node</code> | The tree node. |
-| <code><a href="#cdk-eventbridge-partner-processors.GitHubEventProcessor.property.githubEventsFunction">githubEventsFunction</a></code> | <code>aws-cdk-lib.aws_lambda.Function</code> | *No description.* |
 | <code><a href="#cdk-eventbridge-partner-processors.GitHubEventProcessor.property.invocationAlarm">invocationAlarm</a></code> | <code><a href="#cdk-eventbridge-partner-processors.InvocationAlarm">InvocationAlarm</a></code> | *No description.* |
+| <code><a href="#cdk-eventbridge-partner-processors.GitHubEventProcessor.property.partnerEventsFunction">partnerEventsFunction</a></code> | <code>aws-cdk-lib.aws_lambda.Function</code> | *No description.* |
 
 ---
 
@@ -106,16 +106,6 @@ The tree node.
 
 ---
 
-##### `githubEventsFunction`<sup>Required</sup> <a name="githubEventsFunction" id="cdk-eventbridge-partner-processors.GitHubEventProcessor.property.githubEventsFunction"></a>
-
-```typescript
-public readonly githubEventsFunction: Function;
-```
-
-- *Type:* aws-cdk-lib.aws_lambda.Function
-
----
-
 ##### `invocationAlarm`<sup>Required</sup> <a name="invocationAlarm" id="cdk-eventbridge-partner-processors.GitHubEventProcessor.property.invocationAlarm"></a>
 
 ```typescript
@@ -123,6 +113,16 @@ public readonly invocationAlarm: InvocationAlarm;
 ```
 
 - *Type:* <a href="#cdk-eventbridge-partner-processors.InvocationAlarm">InvocationAlarm</a>
+
+---
+
+##### `partnerEventsFunction`<sup>Required</sup> <a name="partnerEventsFunction" id="cdk-eventbridge-partner-processors.GitHubEventProcessor.property.partnerEventsFunction"></a>
+
+```typescript
+public readonly partnerEventsFunction: Function;
+```
+
+- *Type:* aws-cdk-lib.aws_lambda.Function
 
 ---
 
@@ -315,8 +315,8 @@ Any object.
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#cdk-eventbridge-partner-processors.PartnerProcessor.property.node">node</a></code> | <code>constructs.Node</code> | The tree node. |
-| <code><a href="#cdk-eventbridge-partner-processors.PartnerProcessor.property.githubEventsFunction">githubEventsFunction</a></code> | <code>aws-cdk-lib.aws_lambda.Function</code> | *No description.* |
 | <code><a href="#cdk-eventbridge-partner-processors.PartnerProcessor.property.invocationAlarm">invocationAlarm</a></code> | <code><a href="#cdk-eventbridge-partner-processors.InvocationAlarm">InvocationAlarm</a></code> | *No description.* |
+| <code><a href="#cdk-eventbridge-partner-processors.PartnerProcessor.property.partnerEventsFunction">partnerEventsFunction</a></code> | <code>aws-cdk-lib.aws_lambda.Function</code> | *No description.* |
 
 ---
 
@@ -332,16 +332,6 @@ The tree node.
 
 ---
 
-##### `githubEventsFunction`<sup>Required</sup> <a name="githubEventsFunction" id="cdk-eventbridge-partner-processors.PartnerProcessor.property.githubEventsFunction"></a>
-
-```typescript
-public readonly githubEventsFunction: Function;
-```
-
-- *Type:* aws-cdk-lib.aws_lambda.Function
-
----
-
 ##### `invocationAlarm`<sup>Required</sup> <a name="invocationAlarm" id="cdk-eventbridge-partner-processors.PartnerProcessor.property.invocationAlarm"></a>
 
 ```typescript
@@ -349,6 +339,16 @@ public readonly invocationAlarm: InvocationAlarm;
 ```
 
 - *Type:* <a href="#cdk-eventbridge-partner-processors.InvocationAlarm">InvocationAlarm</a>
+
+---
+
+##### `partnerEventsFunction`<sup>Required</sup> <a name="partnerEventsFunction" id="cdk-eventbridge-partner-processors.PartnerProcessor.property.partnerEventsFunction"></a>
+
+```typescript
+public readonly partnerEventsFunction: Function;
+```
+
+- *Type:* aws-cdk-lib.aws_lambda.Function
 
 ---
 
@@ -440,8 +440,8 @@ Any object.
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#cdk-eventbridge-partner-processors.StripeEventProcessor.property.node">node</a></code> | <code>constructs.Node</code> | The tree node. |
-| <code><a href="#cdk-eventbridge-partner-processors.StripeEventProcessor.property.githubEventsFunction">githubEventsFunction</a></code> | <code>aws-cdk-lib.aws_lambda.Function</code> | *No description.* |
 | <code><a href="#cdk-eventbridge-partner-processors.StripeEventProcessor.property.invocationAlarm">invocationAlarm</a></code> | <code><a href="#cdk-eventbridge-partner-processors.InvocationAlarm">InvocationAlarm</a></code> | *No description.* |
+| <code><a href="#cdk-eventbridge-partner-processors.StripeEventProcessor.property.partnerEventsFunction">partnerEventsFunction</a></code> | <code>aws-cdk-lib.aws_lambda.Function</code> | *No description.* |
 
 ---
 
@@ -457,16 +457,6 @@ The tree node.
 
 ---
 
-##### `githubEventsFunction`<sup>Required</sup> <a name="githubEventsFunction" id="cdk-eventbridge-partner-processors.StripeEventProcessor.property.githubEventsFunction"></a>
-
-```typescript
-public readonly githubEventsFunction: Function;
-```
-
-- *Type:* aws-cdk-lib.aws_lambda.Function
-
----
-
 ##### `invocationAlarm`<sup>Required</sup> <a name="invocationAlarm" id="cdk-eventbridge-partner-processors.StripeEventProcessor.property.invocationAlarm"></a>
 
 ```typescript
@@ -474,6 +464,16 @@ public readonly invocationAlarm: InvocationAlarm;
 ```
 
 - *Type:* <a href="#cdk-eventbridge-partner-processors.InvocationAlarm">InvocationAlarm</a>
+
+---
+
+##### `partnerEventsFunction`<sup>Required</sup> <a name="partnerEventsFunction" id="cdk-eventbridge-partner-processors.StripeEventProcessor.property.partnerEventsFunction"></a>
+
+```typescript
+public readonly partnerEventsFunction: Function;
+```
+
+- *Type:* aws-cdk-lib.aws_lambda.Function
 
 ---
 
@@ -565,8 +565,8 @@ Any object.
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#cdk-eventbridge-partner-processors.TwilioEventProcessor.property.node">node</a></code> | <code>constructs.Node</code> | The tree node. |
-| <code><a href="#cdk-eventbridge-partner-processors.TwilioEventProcessor.property.githubEventsFunction">githubEventsFunction</a></code> | <code>aws-cdk-lib.aws_lambda.Function</code> | *No description.* |
 | <code><a href="#cdk-eventbridge-partner-processors.TwilioEventProcessor.property.invocationAlarm">invocationAlarm</a></code> | <code><a href="#cdk-eventbridge-partner-processors.InvocationAlarm">InvocationAlarm</a></code> | *No description.* |
+| <code><a href="#cdk-eventbridge-partner-processors.TwilioEventProcessor.property.partnerEventsFunction">partnerEventsFunction</a></code> | <code>aws-cdk-lib.aws_lambda.Function</code> | *No description.* |
 
 ---
 
@@ -582,16 +582,6 @@ The tree node.
 
 ---
 
-##### `githubEventsFunction`<sup>Required</sup> <a name="githubEventsFunction" id="cdk-eventbridge-partner-processors.TwilioEventProcessor.property.githubEventsFunction"></a>
-
-```typescript
-public readonly githubEventsFunction: Function;
-```
-
-- *Type:* aws-cdk-lib.aws_lambda.Function
-
----
-
 ##### `invocationAlarm`<sup>Required</sup> <a name="invocationAlarm" id="cdk-eventbridge-partner-processors.TwilioEventProcessor.property.invocationAlarm"></a>
 
 ```typescript
@@ -599,6 +589,16 @@ public readonly invocationAlarm: InvocationAlarm;
 ```
 
 - *Type:* <a href="#cdk-eventbridge-partner-processors.InvocationAlarm">InvocationAlarm</a>
+
+---
+
+##### `partnerEventsFunction`<sup>Required</sup> <a name="partnerEventsFunction" id="cdk-eventbridge-partner-processors.TwilioEventProcessor.property.partnerEventsFunction"></a>
+
+```typescript
+public readonly partnerEventsFunction: Function;
+```
+
+- *Type:* aws-cdk-lib.aws_lambda.Function
 
 ---
 
@@ -719,7 +719,7 @@ const partnerFunctionProps: PartnerFunctionProps = { ... }
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#cdk-eventbridge-partner-processors.PartnerFunctionProps.property.eventbridgePartner">eventbridgePartner</a></code> | <code><a href="#cdk-eventbridge-partner-processors.Partner">Partner</a></code> | The partner to create an events processor for. |
-| <code><a href="#cdk-eventbridge-partner-processors.PartnerFunctionProps.property.eventBus">eventBus</a></code> | <code>aws-cdk-lib.aws_events.IEventBus</code> | Eventbus to send GitHub events to. |
+| <code><a href="#cdk-eventbridge-partner-processors.PartnerFunctionProps.property.eventBus">eventBus</a></code> | <code>aws-cdk-lib.aws_events.IEventBus</code> | Eventbus to send Partner events to. |
 | <code><a href="#cdk-eventbridge-partner-processors.PartnerFunctionProps.property.lambdaInvocationAlarmThreshold">lambdaInvocationAlarmThreshold</a></code> | <code>number</code> | Maximum number of concurrent invocations on the fURL function before triggering the alarm. |
 | <code><a href="#cdk-eventbridge-partner-processors.PartnerFunctionProps.property.webhookSecret">webhookSecret</a></code> | <code>aws-cdk-lib.aws_secretsmanager.ISecret</code> | SM Secret containing the secret string used to validate webhook events. |
 
@@ -745,7 +745,7 @@ public readonly eventBus: IEventBus;
 
 - *Type:* aws-cdk-lib.aws_events.IEventBus
 
-Eventbus to send GitHub events to.
+Eventbus to send Partner events to.
 
 ---
 

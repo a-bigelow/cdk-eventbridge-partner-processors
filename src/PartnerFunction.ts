@@ -15,7 +15,7 @@ export interface PartnerFunctionProps {
   readonly webhookSecret: ISecret;
 
   /**
-     * Eventbus to send GitHub events to.
+     * Eventbus to send Partner events to.
      */
   readonly eventBus: IEventBus;
 
@@ -36,12 +36,12 @@ export interface PartnerFunctionProps {
  * @see https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-saas-furls.html#furls-connection-github
  */
 export abstract class PartnerProcessor extends Construct {
-  public githubEventsFunction: Function;
+  public partnerEventsFunction: Function;
   public invocationAlarm: InvocationAlarm;
   constructor(scope: Construct, id: string, props: PartnerFunctionProps) {
     super(scope, id);
 
-    this.githubEventsFunction = new Function(this, 'GitHubEventsFunction', {
+    this.partnerEventsFunction = new Function(this, `${props.eventbridgePartner}EventsFunction`, {
       code: Code.fromBucket(Bucket.fromBucketName(this, 'AWSFunctionBucket', `eventbridge-inbound-webhook-templates-prod-${Stack.of(this).region}`), `lambda-templates/${props.eventbridgePartner}-lambdasrc.zip`),
       handler: 'app.handler',
       runtime: Runtime.PYTHON_3_7,
@@ -54,16 +54,16 @@ export abstract class PartnerProcessor extends Construct {
       },
     });
 
-    this.invocationAlarm = new InvocationAlarm(this, 'GitHubInvocationAlarm', {
+    this.invocationAlarm = new InvocationAlarm(this, `${props.eventbridgePartner}InvocationAlarm`, {
       threshold: props.lambdaInvocationAlarmThreshold,
-      eventFunction: this.githubEventsFunction,
+      eventFunction: this.partnerEventsFunction,
     });
 
-    const fURL = this.githubEventsFunction.addFunctionUrl({ authType: FunctionUrlAuthType.NONE });
+    const fURL = this.partnerEventsFunction.addFunctionUrl({ authType: FunctionUrlAuthType.NONE });
 
-    props.webhookSecret.grantRead(this.githubEventsFunction);
-    props.eventBus.grantPutEventsTo(this.githubEventsFunction);
+    props.webhookSecret.grantRead(this.partnerEventsFunction);
+    props.eventBus.grantPutEventsTo(this.partnerEventsFunction);
 
-    new CfnOutput(this, 'GitHubFunctionUrl', { value: fURL.url });
+    new CfnOutput(this, `${props.eventbridgePartner}FunctionUrl`, { value: fURL.url });
   }
 }
