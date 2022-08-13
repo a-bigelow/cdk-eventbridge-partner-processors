@@ -5,6 +5,7 @@ const project = new awscdk.AwsCdkConstructLibrary({
   cdkVersion: '2.37.1',
   defaultReleaseBranch: 'main',
   name: 'cdk-eventbridge-partner-processors',
+  keywords: ['cdk', 'eventbridge', 'github', 'stripe', 'twilio'],
   projenrcTs: true,
   release: true,
   repositoryUrl: 'https://github.com/a-bigelow/cdk-eventbridge-partner-processors.git',
