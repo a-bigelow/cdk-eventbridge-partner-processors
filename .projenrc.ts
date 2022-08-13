@@ -13,6 +13,9 @@ const project = new awscdk.AwsCdkConstructLibrary({
     distName: 'cdk-eventbridge-partner-processors',
     module: 'cdk-eventbridge-partner-processors',
   },
+  publishToGo: {
+    moduleName: 'github.com/a-bigelow/cdk-eventbridge-partner-processors',
+  },
   // deps: [],                /* Runtime dependencies of this module. */
   // description: undefined,  /* The description is just a string that helps people understand the purpose of the package. */
   // devDeps: [],             /* Build dependencies for this module. */
