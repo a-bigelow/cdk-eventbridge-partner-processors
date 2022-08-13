@@ -4,6 +4,7 @@ import { Code, Function, FunctionUrlAuthType, Runtime } from 'aws-cdk-lib/aws-la
 import { Bucket } from 'aws-cdk-lib/aws-s3';
 import { ISecret } from 'aws-cdk-lib/aws-secretsmanager';
 import { Construct } from 'constructs';
+import { InvocationAlarm } from './Util';
 
 export interface GitHubProps {
 
@@ -29,7 +30,8 @@ export interface GitHubProps {
  * @see https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-saas-furls.html#furls-connection-github
  */
 export class GitHubEventProcessor extends Construct {
-  private githubEventsFunction: Function;
+  public githubEventsFunction: Function;
+  public invocationAlarm: InvocationAlarm;
   constructor(scope: Construct, id: string, props: GitHubProps) {
     super(scope, id);
 
@@ -44,6 +46,11 @@ export class GitHubEventProcessor extends Construct {
         GITHUB_WEBHOOK_SECRET_ARN: props.gitHubWebhookSecret.secretArn,
         EVENT_BUS_NAME: props.eventBus.eventBusName,
       },
+    });
+
+    this.invocationAlarm = new InvocationAlarm(this, 'GitHubInvocationAlarm', {
+      threshold: props.lambdaInvocationAlarmThreshold,
+      eventFunction: this.githubEventsFunction,
     });
 
     const fURL = this.githubEventsFunction.addFunctionUrl({ authType: FunctionUrlAuthType.NONE });
