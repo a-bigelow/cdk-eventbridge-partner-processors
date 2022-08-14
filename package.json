@@ -125,7 +125,7 @@
         "module": "a-bigelow.cdk-eventbridge-partner-processors"
       },
       "go": {
-        "moduleName": "github.com/a-bigelow/cdk-eventbridge-partner-processors"
+        "moduleName": "github.com/a-bigelow/cdk-eventbridge-partner-processors-go"
       }
     },
     "tsc": {
