@@ -43,7 +43,7 @@ export abstract class PartnerProcessor extends Construct {
 
     this.partnerEventsFunction = new Function(this, `${props.eventbridgePartner}EventsFunction`, {
       code: Code.fromBucket(Bucket.fromBucketName(this, 'AWSFunctionBucket', `eventbridge-inbound-webhook-templates-prod-${Stack.of(this).region}`), `lambda-templates/${props.eventbridgePartner}-lambdasrc.zip`),
-      handler: 'app.handler',
+      handler: 'app.lambda_handler',
       runtime: Runtime.PYTHON_3_7,
       memorySize: 128,
       timeout: Duration.seconds(100),
