@@ -1,8 +1,11 @@
 # Eventbridge SaaS Partner fURLs
 
+[![View on Construct Hub](https://constructs.dev/badge?package=cdk-eventbridge-partner-processors)](https://constructs.dev/packages/cdk-eventbridge-partner-processors)
+
 [![npm version](https://badge.fury.io/js/cdk-eventbridge-partner-processors.svg)](https://badge.fury.io/js/cdk-eventbridge-partner-processors)
 [![PyPI version](https://badge.fury.io/py/a-bigelow.cdk-eventbridge-partner-processors.svg)](https://badge.fury.io/py/a-bigelow.cdk-eventbridge-partner-processors)
 [![Go project version](https://badge.fury.io/go/github.com%2Fa-bigelow%2Fcdk-eventbridge-partner-processors-go.svg)](https://badge.fury.io/go/github.com%2Fa-bigelow%2Fcdk-eventbridge-partner-processors-go)
+
 This CDK Construct library provides CDK constructs for the 1st-party (i.e. developed by AWS) lambda fURL webhook receivers for:
 
 - GitHub
@@ -15,6 +18,8 @@ These examples are consistent for all 3 primary exported constructs of this libr
 - `GitHubEventProcessor`
 - `TwilioEventProcessor`
 - `StripeEventProcessor`
+
+>Note: Click on the above `View on Construct Hub` button to view auto-generated examples in Python/Go
 
 ### Typescript
 
