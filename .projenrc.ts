@@ -4,6 +4,11 @@ const project = new awscdk.AwsCdkConstructLibrary({
   authorAddress: 'adam@adambigelow.com',
   cdkVersion: '2.37.1',
   defaultReleaseBranch: 'main',
+  depsUpgrade: true,
+  autoApproveUpgrades: true,
+  autoApproveOptions: {
+    allowedUsernames: ['a-bigelow'],
+  },
   name: 'cdk-eventbridge-partner-processors',
   keywords: ['cdk', 'eventbridge', 'github', 'stripe', 'twilio'],
   projenrcTs: true,
