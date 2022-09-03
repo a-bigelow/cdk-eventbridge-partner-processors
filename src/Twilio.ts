@@ -24,7 +24,7 @@ export interface TwilioProps {
 }
 
 /**
- * CDK wrapper for the GitHub Eventbridge processor.
+ * CDK wrapper for the Twilio Eventbridge processor.
  * @see https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-saas-furls.html#furls-connection-github
  */
 export class TwilioEventProcessor extends PartnerProcessor {

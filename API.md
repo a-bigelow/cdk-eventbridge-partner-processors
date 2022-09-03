@@ -230,9 +230,11 @@ The tree node.
 
 ### PartnerProcessor <a name="PartnerProcessor" id="cdk-eventbridge-partner-processors.PartnerProcessor"></a>
 
-CDK wrapper for the GitHub Eventbridge processor.
+Abstract class for Lambda-driven Eventbridge integrations.
 
-> [https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-saas-furls.html#furls-connection-github](https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-saas-furls.html#furls-connection-github)
+This only works because the pattern for the S3 Keys lines up to: lambda-templates/<partner>-lambdasrc.zip
+
+> [https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-saas-furls.html](https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-saas-furls.html)
 
 #### Initializers <a name="Initializers" id="cdk-eventbridge-partner-processors.PartnerProcessor.Initializer"></a>
 
@@ -355,7 +357,7 @@ public readonly partnerEventsFunction: Function;
 
 ### StripeEventProcessor <a name="StripeEventProcessor" id="cdk-eventbridge-partner-processors.StripeEventProcessor"></a>
 
-CDK wrapper for the GitHub Eventbridge processor.
+CDK wrapper for the Stripe Eventbridge processor.
 
 > [https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-saas-furls.html#furls-connection-github](https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-saas-furls.html#furls-connection-github)
 
@@ -480,7 +482,7 @@ public readonly partnerEventsFunction: Function;
 
 ### TwilioEventProcessor <a name="TwilioEventProcessor" id="cdk-eventbridge-partner-processors.TwilioEventProcessor"></a>
 
-CDK wrapper for the GitHub Eventbridge processor.
+CDK wrapper for the Twilio Eventbridge processor.
 
 > [https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-saas-furls.html#furls-connection-github](https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-saas-furls.html#furls-connection-github)
 
