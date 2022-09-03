@@ -32,8 +32,9 @@ export interface PartnerFunctionProps {
 }
 
 /**
- * CDK wrapper for the GitHub Eventbridge processor.
- * @see https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-saas-furls.html#furls-connection-github
+ * Abstract class for Lambda-driven Eventbridge integrations.
+ * This only works because the pattern for the S3 Keys lines up to: lambda-templates/<partner>-lambdasrc.zip
+ * @see https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-saas-furls.html
  */
 export abstract class PartnerProcessor extends Construct {
   public partnerEventsFunction: Function;
