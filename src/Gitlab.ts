@@ -25,7 +25,7 @@ export interface GitLabProps {
 
 /**
  * CDK wrapper for the GitLab Eventbridge processor.
- * @see https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-saas-furls.html#furls-connection-github
+ * @see https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-saas-furls.html
  */
 export class GitLabEventProcessor extends PartnerProcessor {
   constructor(scope: Construct, id: string, props: GitLabProps) {

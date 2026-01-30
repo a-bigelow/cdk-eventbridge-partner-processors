@@ -70,6 +70,7 @@
     "cdk",
     "eventbridge",
     "github",
+    "gitlab",
     "stripe",
     "twilio"
   ],

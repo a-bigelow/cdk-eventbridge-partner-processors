@@ -10,11 +10,11 @@ const project = new awscdk.AwsCdkConstructLibrary({
     allowedUsernames: ['a-bigelow'],
   },
   name: 'cdk-eventbridge-partner-processors',
-  keywords: ['cdk', 'eventbridge', 'github', 'stripe', 'twilio'],
+  keywords: ['cdk', 'eventbridge', 'github', 'gitlab', 'stripe', 'twilio'],
   projenrcTs: true,
   release: true,
   repositoryUrl: 'https://github.com/a-bigelow/cdk-eventbridge-partner-processors.git',
-  gitignore: ['.idea/'],
+  gitignore: ['.idea/', 'package-lock.json'],
   publishToPypi: {
     distName: 'a-bigelow.cdk-eventbridge-partner-processors',
     module: 'a-bigelow.cdk-eventbridge-partner-processors',
