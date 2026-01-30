@@ -212,6 +212,9 @@
       "steps": [
         {
           "spawn": "docgen"
+        },
+        {
+          "exec": "mkdir -p lib/gitlab-lambda && cp -r src/gitlab-lambda/* lib/gitlab-lambda/"
         }
       ]
     },

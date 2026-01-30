@@ -27,4 +27,8 @@ const project = new awscdk.AwsCdkConstructLibrary({
   // devDeps: [],             /* Build dependencies for this module. */
   // packageName: undefined,  /* The "name" in package.json. */
 });
+
+// Copy GitLab Lambda function code to lib directory after compilation
+project.postCompileTask.exec('mkdir -p lib/gitlab-lambda && cp -r src/gitlab-lambda/* lib/gitlab-lambda/');
+
 project.synth();
