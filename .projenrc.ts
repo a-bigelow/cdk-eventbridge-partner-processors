@@ -10,11 +10,11 @@ const project = new awscdk.AwsCdkConstructLibrary({
     allowedUsernames: ['a-bigelow'],
   },
   name: 'cdk-eventbridge-partner-processors',
-  keywords: ['cdk', 'eventbridge', 'github', 'stripe', 'twilio'],
+  keywords: ['cdk', 'eventbridge', 'github', 'gitlab', 'stripe', 'twilio'],
   projenrcTs: true,
   release: true,
   repositoryUrl: 'https://github.com/a-bigelow/cdk-eventbridge-partner-processors.git',
-  gitignore: ['.idea/'],
+  gitignore: ['.idea/', 'package-lock.json'],
   publishToPypi: {
     distName: 'a-bigelow.cdk-eventbridge-partner-processors',
     module: 'a-bigelow.cdk-eventbridge-partner-processors',
@@ -27,4 +27,8 @@ const project = new awscdk.AwsCdkConstructLibrary({
   // devDeps: [],             /* Build dependencies for this module. */
   // packageName: undefined,  /* The "name" in package.json. */
 });
+
+// Copy GitLab Lambda function code to lib directory after compilation
+project.postCompileTask.exec('mkdir -p lib/gitlab-lambda && cp -r src/gitlab-lambda/* lib/gitlab-lambda/');
+
 project.synth();

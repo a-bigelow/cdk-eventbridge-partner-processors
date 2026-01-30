@@ -32,6 +32,7 @@ jspm_packages/
 .yarn-integrity
 .cache
 .idea/
+package-lock.json
 /test-reports/
 junit.xml
 /coverage/
