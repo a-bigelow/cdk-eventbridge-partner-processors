@@ -3,6 +3,7 @@
  */
 export enum Partner {
   GITHUB = 'github',
+  GITLAB = 'gitlab',
   STRIPE = 'stripe',
   TWILIO = 'twilio'
 }

@@ -52,3 +52,4 @@ junit.xml
 tsconfig.json
 !/API.md
 !/.projenrc.ts
+package-lock.json
